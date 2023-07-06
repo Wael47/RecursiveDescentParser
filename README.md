@@ -28,7 +28,7 @@ loop-stmt -> loop “(“ bool-exp “)” do statement
 bool-exp -> name-value relational-oper name-value  
 relational-oper -> "=" | "<>" | "<" | "<=" | ">" | ">="  
 
-Notes:
+Notes:  
 (0) All “names” and “integer-value” are user defined names and values in the source code.  
 (1) The tokens in bold letters are reserved words.  
 (2) The words between “ …” are terminals (tokens).  
