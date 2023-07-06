@@ -1,32 +1,32 @@
 Given the grammar defined by the following set of production rules in the EBNF :
 
-project-declaration -> project-def "." __
-project-def -> project-heading declarations compound-stmt __
-project-heading -> project "name" ";" __
-declarations -> const-decl var-decl subroutine-decl __
-const-decl -> const ( const-item ";" )+ |  __
-const-item -> "name" = "integer-value" __
-var-decl -> var (var-item ";" )+ |  __
-var-item -> name-list ":" int __
-name-list -> "name" ( "," "name" )* __
-subroutine-decl -> subroutine-heading declarations compound-stmt “;” |  __
-subroutine-heading -> routine "name" ";" __
-compund-stmt -> start stmt-list end __
-stmt-list -> ( statement ";" )* __
-statement -> ass-stmt | inout-stmt | if-stmt | loop-stmt | compound-stmt |  __
-ass-stmt ->” name” ":=" arith-exp __
-arith-exp -> term ( add-sign term )* __
-term -> factor ( mul-sign factor )* __
-factor -> "(" arith-exp ")" | name-value __
-name-value -> "name" | "integer-value" __
-add-sign -> "+" | "-" __
-mul-sign -> "*" | "/" | “%” __
-inout-stmt -> input "(" "name" ")" | output "(" name-value ")" __
-if-stmt -> if “(“ bool-exp “)” then statement else-part endif __
-else-part -> else statement |  __
-loop-stmt -> loop “(“ bool-exp “)” do statement __
-bool-exp -> name-value relational-oper name-value __
-relational-oper -> "=" | "<>" | "<" | "<=" | ">" | ">=" __
+project-declaration -> project-def "."  
+project-def -> project-heading declarations compound-stmt  
+project-heading -> project "name" ";"  
+declarations -> const-decl var-decl subroutine-decl  
+const-decl -> const ( const-item ";" )+ |   
+const-item -> "name" = "integer-value"  
+var-decl -> var (var-item ";" )+ |   
+var-item -> name-list ":" int  
+name-list -> "name" ( "," "name" )*  
+subroutine-decl -> subroutine-heading declarations compound-stmt “;” |   
+subroutine-heading -> routine "name" ";"  
+compund-stmt -> start stmt-list end  
+stmt-list -> ( statement ";" )*  
+statement -> ass-stmt | inout-stmt | if-stmt | loop-stmt | compound-stmt |   
+ass-stmt ->” name” ":=" arith-exp  
+arith-exp -> term ( add-sign term )*  
+term -> factor ( mul-sign factor )*  
+factor -> "(" arith-exp ")" | name-value  
+name-value -> "name" | "integer-value"  
+add-sign -> "+" | "-"  
+mul-sign -> "*" | "/" | “%”  
+inout-stmt -> input "(" "name" ")" | output "(" name-value ")"  
+if-stmt -> if “(“ bool-exp “)” then statement else-part endif  
+else-part -> else statement |   
+loop-stmt -> loop “(“ bool-exp “)” do statement  
+bool-exp -> name-value relational-oper name-value  
+relational-oper -> "=" | "<>" | "<" | "<=" | ">" | ">="  
 
 Notes:
 (0) All “names” and “integer-value” are user defined names and values in the source code.
