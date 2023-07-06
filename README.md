@@ -29,9 +29,9 @@ bool-exp -> name-value relational-oper name-value
 relational-oper -> "=" | "<>" | "<" | "<=" | ">" | ">="  
 
 Notes:
-(0) All “names” and “integer-value” are user defined names and values in the source code.
-(1) The tokens in bold letters are reserved words.
-(2) The words between “ …” are terminals (tokens).
+(0) All “names” and “integer-value” are user defined names and values in the source code.  
+(1) The tokens in bold letters are reserved words.  
+(2) The words between “ …” are terminals (tokens).  
 
 Write an a recursive descent parser for the above grammar.
 * You should work individually only, any signs of cheating will be penalized severely.
